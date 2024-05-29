@@ -1,8 +1,7 @@
 
 const Banner = () => {
     return (
-        <div>
-            <div>
+        <div className="mb-20">
                 <div className='bg-[url("https://i.postimg.cc/DZmG1nLk/banner.jpg")] bg-cover bg-no-repeat  bg-right-top h-[580px] '>
                     <h1 className='text-white text-[55px] Rancho pt-36 pl-32 mb-2'>Would you like a Cup of Delicious Coffee?</h1>
                     <p className='text-white pl-32 mb-5'>Its coffee time - Sip & Savor - Relaxation in every sip!
@@ -34,7 +33,6 @@ const Banner = () => {
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     );
 };

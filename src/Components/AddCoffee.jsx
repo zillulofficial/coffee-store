@@ -37,7 +37,7 @@ const AddCoffee = () => {
         })
     }
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto mt-20">
             <div className="bg-[#F4F3F0]  py-16 px-28">
                 <div className=" text-center mb-10">
                     <h3 className="Rancho text-5xl">Add new Coffee</h3>
