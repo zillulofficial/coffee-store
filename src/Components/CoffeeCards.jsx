@@ -5,7 +5,7 @@ import { MdDelete } from "react-icons/md";
 import Swal from 'sweetalert2';
 import { Link } from 'react-router-dom';
 
-const CoffeeCards = ({ coffee }) => {
+const CoffeeCards = ({ coffee, coffees, setCoffees }) => {
     const { _id, name, chief, supplier, category, details, url } = coffee
 
     const handleDelete = id => {
@@ -33,6 +33,8 @@ const CoffeeCards = ({ coffee }) => {
                                 text: "Your file has been deleted.",
                                 icon: "success"
                             });
+                            const del= coffees.filter(cof=> cof._id!== id)
+                            setCoffees(del)
                         }
                     })
             }
@@ -61,5 +63,7 @@ const CoffeeCards = ({ coffee }) => {
 
 export default CoffeeCards;
 CoffeeCards.propTypes = {
-    coffee: PropTypes.object
+    coffee: PropTypes.object,
+    coffees:PropTypes.object,
+    setCoffees: PropTypes.func
 }

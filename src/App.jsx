@@ -3,9 +3,11 @@ import { Link, useLoaderData } from 'react-router-dom'
 import './App.css'
 import CoffeeCards from './Components/CoffeeCards'
 import Banner from './Components/Banner'
+import { useState } from "react";
 
 function App() {
-  const coffees = useLoaderData()
+  const loadedCoffees = useLoaderData()
+  const [coffees, setCoffees]= useState(loadedCoffees)
 
 
   return (
@@ -21,7 +23,7 @@ function App() {
 
         <div className='grid md:grid-cols-2 gap-5'>
           {
-            coffees.map(coffee => <CoffeeCards key={coffee._id} coffee={coffee}></CoffeeCards>)
+            coffees.map(coffee => <CoffeeCards key={coffee._id} coffee={coffee} coffees={coffees} setCoffees={setCoffees}></CoffeeCards>)
           }
         </div>
       </div>
