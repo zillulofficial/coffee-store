@@ -4,6 +4,7 @@ import './App.css'
 import CoffeeCards from './Components/CoffeeCards'
 import Banner from './Components/Banner'
 import { useState } from "react";
+import Navbar from "./Components/Navbar";
 
 function App() {
   const loadedCoffees = useLoaderData()
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <>
+    <Navbar></Navbar>
       <Banner></Banner>
       <div className='container mx-auto mb-20'>
 
