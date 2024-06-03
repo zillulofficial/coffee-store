@@ -11,6 +11,7 @@ import UpdateCoffee from './Components/UpdateCoffee';
 import SignUp from './Components/SignUp/SignUp';
 import AuthProvider from './Provider/AuthProvider';
 import Users from './Components/Users';
+import SignIn from './Components/SignUp/SignIn';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <SignUp></SignUp>
+  },
+  {
+    path: "/login",
+    element: <SignIn></SignIn>
   },
   {
     path: '/users',

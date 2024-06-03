@@ -13,7 +13,6 @@ const SignUp = () => {
     const handleSubmit = e => {
         e.preventDefault()
         const form = e.target
-        const name = form.name.value
         const email = form.email.value
         const password = form.password.value
 
@@ -60,13 +59,6 @@ const SignUp = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Name</span>
-                                </label>
-                                <input type="text" name="name" placeholder="Your Name" className="input input-bordered"
-                                />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
                                 <input type="email" name="email" placeholder="email" className="input input-bordered"
@@ -92,7 +84,7 @@ const SignUp = () => {
 
                             <div className="flex justify-between items-center">
                                 <p>ALready Signed Up?</p>
-                                <Link to="/login"><button className=" text-black hover:bg-[#a23b6f33] px-4 py-2 rounded-full border-nones font-bold">Login Now</button></Link>
+                                <Link to="/login"><button className=" text-black hover:bg-[#a23b6f33] px-4 py-2 rounded-full border-nones font-bold">Sign in Now</button></Link>
                             </div>
                         </form>
                     </div>
